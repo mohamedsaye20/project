@@ -1,0 +1,246 @@
+
+*{
+  box-sizing: border-box;
+
+}
+
+body{
+  font-family: "work sans", sans-serif ;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Mountain_Range_Banner.jpg/2560px-Mountain_Range_Banner.jpg");
+
+}
+
+
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px){
+  .container{
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px){
+  .container{
+    width: 970;
+  }
+}
+
+@media (min-width: 1200px){
+  .container{
+    width: 1170;
+  }
+}
+/*End Global Ruls*/
+/*Start Components*/
+.spacial-heading{
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.spacial-heading + p{
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+ 
+@media(max-width: 767px){
+  .spacial-heading{
+    font-size: 60px;
+  }
+  .spacial-heading + p{
+    margin-top: -20px;
+
+  }
+}
+
+/*End components*/
+/*Start Header*/
+.header{
+  padding: 20px;
+  
+}
+
+
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo{
+  width: 60px;
+}
+
+.header .link{
+  position: relative;
+}
+.header .link:hover .icon span:nth-child(2){
+  width: 100%;
+  
+}
+
+.header .link .icon{
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header .link .icon span{
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+
+.header .link .icon span:first-child{
+  width: 100%;
+}
+
+.header .link .icon span:nth-child(2){
+  width: 60%;
+  transition: 0.3s;
+}
+
+
+.header .link .icon span:last-child(3){
+  width: 100%;
+}
+
+.header .link ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+}
+
+.header .link ul:before{
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color:  transparent transparent blue transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+  margin-bottom: 5px;
+}
+
+.header .link:hover ul{
+  display: block;
+}
+
+
+
+.header .link ul li a{
+  /*display: block;*/
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.header .link ul li a:hover{
+  padding-left: 25px;
+}
+
+.header .link ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+
+h1{
+  margin: 0;
+  
+}
+.landing{
+  background-size: auto;
+  height: calc(100vh - 66px);
+  position: relative;
+}
+ .landing .intro-text{
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 320px;
+  max-width: 100%;
+ }
+
+.landing .intro-text h1{
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+
+.landing .intro-text p{
+  font-size: 19px;
+  line-height: none 1.8;
+}
+
+
+/*Start Features*/
+.features{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+
+}
+.features .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(207px, 1fr));
+  grid-gap: 10px;
+}
+
+.features .feat{
+  padding: 20px;
+  text-align: center;
+
+}
+
+.features .feat i{
+  color: var(--main-color)
+}
+
+.features .feat h3{
+  font-weight: 800;
+  margin: 30px 0;
+}
+
+.features .feat p{
+  line-height: 1.8;
+  color: #777;
+  font-size: 18px;
+}
+
+
+/*End Features*/
+
+/* Start Services*/ 
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.services .services-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+/*End services*/
+
